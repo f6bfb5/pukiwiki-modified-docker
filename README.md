@@ -2,9 +2,9 @@
 
 ## Description
 
-Customized PukiWiki with Docker which Dockerfile is cloning from [pen/docker-pukiwiki](https://github.com/pen/docker-pukiwiki).
+Customized PukiWiki with Docker which Dockerfile is cloning from [matanki-saito/eu4_legacy_wiki](https://github.com/matanki-saito/eu4_legacy_wiki).
 
-微修改的 1.5.4 版繁體中文 PukiWiki，翻譯進度大約 60%，借用了 [pen/docker-pukiwiki](https://github.com/pen/docker-pukiwiki) 的 Dockerfile。
+微修改的 1.5.4 版繁體中文 PukiWiki，翻譯進度大約 60%，借用了 [matanki-saito/eu4_legacy_wiki](https://github.com/matanki-saito/eu4_legacy_wiki) 的 Dockerfile。
 
 ## Install
 
