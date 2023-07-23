@@ -1,0 +1,8 @@
+#author("2023-07-21T14:06:05+00:00","default:guest","guest")
+#freeze
+// :RenameLog (rename plugin)
+*2023-07-21 (五) 14:06:05 [#c56e7b88]
+-変更元ページを指定
+--From:[[Help/ComparisonWithOtherTools]]
+--To:[[ComparisonWithOtherTools]]
+-Help/ComparisonWithOtherTools→ComparisonWithOtherTools

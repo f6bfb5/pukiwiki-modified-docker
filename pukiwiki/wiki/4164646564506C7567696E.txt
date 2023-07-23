@@ -1,0 +1,116 @@
+#author("2023-07-22T14:48:45+00:00","default:guest","guest")
+* 新增擴充功能 [#fb6e8f30]
+
+|BGCOLOR(#fefefe):650|c
+|　''Contents''|
+|#contents|
+
+** step.inc.php [#nc8ad15b]
+- 步驟內容
+ #step([選項]){{
+ #:[標題]
+ <內容>
+ ︙ (重複標題和內容)
+ }}
+- 選項
+-- label=文字
+-- pre=文字
+-- marker=<border/double/solid>
+-- mcolor=顏色
+- 下載：[[自作プラグイン/step.inc.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/step.inc.php]]
+- 範例：
+#step(){{
+#:標題
+內容
+#:標題
+內容
+}}
+
+** fa.inc.php [#t8772b8a]
+- 顯示 FontAwesome 的圖示
+ &fa([選項]){class or 圖示名};
+- 用於列表時
+ - &fa(li[,選項]){class or 圖示名};
+- 圖示一覽：[[https://fontawesome.com/icons/v5?s=solid]]
+- 下載：[[自作プラグイン/fa.inc.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/fa.inc.php]]
+- 範例：
+&fa(solid){heart};
+&fa(regular){heart};
+&fa(b,fw){creative-commons};&fa(b,fw){creative-commons-by};&fa(b,fw){creative-commons-nc};&fa(b,fw){creative-commons-sa};
+
+** totalpages.inc.php [#i7579c62]
+- 總頁面數量
+ &totalpages;
+ &totalpages(頁面名);
+- 下載：[[自作プラグイン/totalpages.inc.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/totalpages.inc.php]]
+- 範例：
+本 Wiki 目前有 &totalpages; 則頁面
+
+** datatable.inc.php [#r018782f]
+- 多功能表格
+ #datatable([選項]){{
+ 表格
+ }}
+- 選項：
+- 下載：[[自作プラグイン/datatable.inc.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/datatable.inc.php]]
+- 範例：
+#datatable(number|string||hide|hide|date=YYYY-MM-DD|number|hide|){{
+|~連番|~氏名（カタカナ）|~氏名（ローマ字）|~性別|~電話番号|~生年月日|~年齢|~出身地|~血液型|h
+|1|コモリアヤネ|KomoriAyane|女|0495228672|1999-07-05|22|岡山県|B|
+|2|コガヒデオ|KogaHideo|男|0189706790|1933-02-11|88|高知県|B|
+|3|カミノゴロウ|KaminoGorou|男|0688183323|1962-06-14|59|愛知県|A|
+|4|モリカワサイチ|MorikawaSaichi|男|0880784905|1967-03-25|54|福井県|O|
+|5|ハマセイラ|HamaSeira|女|0273267688|2004-11-19|17|千葉県|O|
+}}
+
+** attachlist.inc.php [#v865dbb3]
+- 便利化上傳檔案管理
+- 下載：[[自作プラグイン/attachlist2.inc.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/attachlist2.inc.php]]
+
+** sitemap.inc.php [#a0b67b82]
+
+ [WIKI_URL]?plugin=sitemap
+- 下載：[[PukiWiki用プラグインサイトマップ生成 sitemap.inc.php | pukiwiki-sitemap>https://apps.ika.monster/pukiwiki-sitemap/]]
+
+** ogp.inc.php [#w2a7abb0]
+
+ #ogp([title][,[description][,image]])
+- 下載：[[PukiWiki用プラグインOGPメタタグ出力 ogp.inc.php | pukiwiki-ogp>https://apps.ika.monster/pukiwiki-ogp/]]
+- 類似功能：[[ogp.inc.php - レ点腫瘍学ノート>https://oncologynote.jp/?12173bf026]]
+
+** iplog.php [#ec2ac668]
+
+- 紀錄留言者的 IP
+- 下載：[[自作プラグイン/iplog.php - PukiWiki-official>https://pukiwiki.osdn.jp/?%E8%87%AA%E4%BD%9C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/iplog.php]]
+
+** flex.inc.php [#gdaa0839]
+
+- 可使用 CSS 的 Flexbox 排版
+ #flex([選項]){{
+ 元素 1
+ #-
+ 元素 2
+ #-
+ ︙
+ }}
+- 下載：[[自作プラグイン/flex - GAMERS Wiki>https://jpngamerswiki.com/?cc5ae53360]]
+
+- 使用 #- 區隔元素
+
+** youtube.inc.php [#ca8ad8e2]
+
+- 嵌入 YouTube 影片
+ #youtube([影片ID or 清單ID or user=使用者名稱 or search=關鍵字][,選項])
+- 下載：[[自作プラグイン/youtube - GAMERS Wiki>https://jpngamerswiki.com/?82f1460fdb]]
+- 範例：
+#youtube(CAZ4VjLqBQc);
+
+** tag.inc.php [#pc346868]
+
+- 標籤功能
+ &tag(tag[,tag[,tag[,...]]]);
+- 下載：[[sonots/pukiwiki-plugin: Sonots' PukiWiki Plugin>https://github.com/sonots/pukiwiki-plugin]]
+-- tag.inc.php、taglist.inc.php、contentsx.inc.php、includex.inc.php、sonots 資料夾
+- 範例：
+
+&tag(Plugin);

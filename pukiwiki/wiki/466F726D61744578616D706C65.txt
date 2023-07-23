@@ -1,0 +1,179 @@
+#author("2023-07-21T22:12:12+00:00","default:guest","guest")
+* 語法範例 [#h87b899c]
+
+|BGCOLOR(#fefefe):650|c
+|　''Contents''|
+|#contents|
+
+#br
+*行內元素 [#m7791eef]
+下方表格展示了如何使用 PukiWiki 的行內文字元素。
+
+** 文字裝飾 [#a4c2798d]
+:|
+~這些語法預設即可使用。
+前 5 項定義於 ''default.ini.php''。
+其他以 "&amp;" 和 "footnote" 開頭的則是由各自的 ''擴充功能''（plugin）驅動。
+查看 ''default.ini.php'' 以修改前者設定。
+查看 ''plugin'' 資料夾裡的對應檔案以修改後者。
+|''語法範例''|''語法內容''|''註解''|h
+|''強調文字''|&#39;&#39;強調文字&#39;&#39;|用兩個單引號包住文字|
+|'''斜體文字'''|&#39;&#39;&#39;斜體文字&#39;&#39;&#39;|用三個單引號包住文字|
+|%%刪除線文字%%| &#37;&#37;刪除線文字&#37;&#37;||
+|%%%下劃線文字%%%| &#37;&#37;&#37;下劃線文字&#37;&#37;&#37;||
+|文字&br;換行|文字 &amp;br; 換行||
+|&size(24){24 字級的文字};| &amp;size(24){24 字級的文字};||
+|&color(purple){紫色文字};| &amp;color(purple){紫色文字};||
+|&color(#663466){色彩文字};| &amp;color(#123456){色彩文字};||
+|&color(yellow,black){黃色文字與黑色背景};| &amp;color(yellow,black){黃色文字與黑色背景};||
+|((這是腳註文字))|&#40;&#40;這是腳註文字&#41;&#41;|輸入文字會插入至頁面底部的腳註|
+|&ref(http://www.example.com);&br;&ref(./pukiwiki.png,alt-title-puki-img);|&amp;ref(http:&#47;&#47;www.example.com);&br;&amp;ref(./pukiwiki.png,alt-title-puki-img);|加入參照內容&br;亦可加入上傳的圖片|
+|&aname(Anchor);|&amp;aname(Anchor);|加入不可視的超連結用錨點|
+
+** 連結類型 [#v232da88]
+:|
+|''語法範例''|''語法內容''|''註解''|h
+|WikiName|&#87;ikiName|連結至同個 Pukiwiki 網站上的其他頁面|
+|[[BracketName]]|&#x5b;&#x5b;&#x42;racketName&#x5d;&#x5d;|連結至同個 Pukiwiki 網站上的其他頁面|
+|http:&#47;&#47;www.example.com|http:&#47;&#47;www.example.com|最簡單的外部連結格式，就像你看到的 :-P|
+|External link|&#91;&#91;External link:http:&#47;&#47;www.example.com]]|連結至外部網站的頁面|
+|&ref(./pukiwiki.png,nolink,sample img);|&#91;&#91;the image's URL:http:&#47;&#47;www.example.com]]|附帶圖片的外部網站連結|
+|[[pukiwiki:FrontPage]]|&#91;&#91;pukiwiki:FrontPage]]|InterWiki 格式的連結|
+|[[Alias>FrontPage]]|&#91;&#91;Alias>FrontPage]]|以不同名稱貼上連至 PukiWiki 裡另一個頁面的連結|
+|[[Alias>pukiwiki:FrontPage]]|&#91;&#91;Alias>pukiwiki:FrontPage]]|進階連結裝飾: Alias 與 InterWiki 的結合|
+|[[&ref(./pukiwiki.png,nolink,Pukiwiki);>FrontPage]]|&#91;&#91;the image's URL>FrontPage]]|以不同名稱附圖貼上連至 PukiWiki 裡另一個頁面的連結|
+
+** 特殊文字 [#nb14c38a]
+:|
+~以下是預設設定下的範例。
+可以從 ''rules.ini.php'' 修改定義，以及從 ''pukiwiki.ini.php'' 修改日期/時間的格式。
+|''語法範例''|''語法內容''|''註解''|h
+|FormatExample|&amp;page;|這會回傳當前頁面的名稱&br;(例如，如果目前頁面是 "Pukiwiki/1.4"，則會回傳 "1.4")|
+|FormatExample|&amp;fpage;|這會回傳當前頁面的全名&br;(例如，如果目前頁面是 "Pukiwiki/1.4"，則會回傳 "Pukiwiki/1.4")|
+|2004-01-16|&amp;date;|這會根據 rules.ini.php 裡的日期定義回傳日期&br;由檔案裡的 "$date_format" 決定|
+|18:27:44|&amp;time;|這會根據 rules.ini.php 裡的時間定義回傳時間&br;由檔案裡的 "$time_format" 決定|
+|2004-01-16 (FRI) 18:27:44|&amp;now;|這會回傳當前時間|
+|2004-01-16|date&#63;|這會根據 rules.ini.php 裡的日期定義回傳日期&br;由檔案裡的 "$date_format" 決定|
+|18:27:44|time&#63;|這會根據 rules.ini.php 裡的時間定義回傳時間&br;由檔案裡的 "$time_format" 決定|
+|2004-01-16 (FRI) 18:27:44|now&#63;|這會回傳當前時間|
+|&heart;|&amp;heart;||
+|&copy;|&amp;copy;||
+|&reg;|&amp;reg;||
+|&trade;|&amp;trade;||
+|&sup2;|&amp;sup2;||
+|&sup3;|&amp;sup3;||
+|&nbsp;|&amp;nbsp;|雖然你可能看不到&br;不過在第一欄裡有個不換行空格&br;這可避免文字在中途換行|
+|&#x20;|&amp;#x20;|這是個一般的空白|
+|&#x2d;|&amp;#x2d;|這是個減號|
+|&#x260e;|&amp;#x260e;|你也可以定義任意 Unicode 字元|
+
+**其它 [#v656944d]
+:|
+|''語法範例''|''語法內容''|''註解''|h
+|行內文字&br;行內文字| 行內文字&amp;br;行內文字|&amp;br; 會被替換為換行符號|
+|行內文字~&br;#擴充功能| 行內文字~&amp;br;#擴充功能|帶有 ~ 的換行符號會變為脫跳字元，無效化後方的 # 字元，一般用來啟動擴充功能&br;cf.[[Paragraph(Block Elements)>#a6ab3c0e]]|
+|&counter;|&amp;counter;|顯示存取計數器|
+|&online;|&amp;online;|顯示當前訪客|
+|&version;|&amp;version;|顯示 PukiWiki 的版本號碼|
+
+* 區塊元素 [#vab576d9]
+~下方內容展示了如何使用區塊元素。
+首先你會看到應該輸入至 PukiWiki 的範例部份，之後才是實際會得到的結果。
+
+** 預先格式化文字 [#n759c266]
+ 預先格式化文字。文字前方有個空格。
+
+預先格式化文字。文字前方有個空格。
+&br;
+** 標題 [#ac5978ad]
+ *標題 層級 1
+ **標題 層級 2
+ ***標題 層級 3
+
+** 段落與作為跳脫字元的波浪號 [#qf934edb]
+ ~段落
+ ~*這不會顯示為標題
+~段落
+~*這不會顯示為標題
+ 換行跳脫範例~
+ #comment (這會讓用作啟動擴充功能的首字語法失效)
+換行跳脫範例~
+
+ #comment (這會讓用作啟動擴充功能的首字語法失效)
+&br;
+
+** 引文 [#kca2e842]
+ >引文 層級 1
+ >>引文 層級 2
+ >>>引文 層級 3
+>引文 層級 1
+>>引文 層級 2
+>>>引文 層級 3
+&br;
+
+** 無序列表 [#z49f05aa]
+ -無序列表 層級 1
+ --無序列表 層級 2
+ ---無序列表 層級 3
+-無序列表 層級 1
+--無序列表 層級 2
+---無序列表 層級 3
+&br;
+
+** 有序列表 [#z5776714]
+ +有序列表 層級 1
+ ++有序列表 層級 2
+ +++有序列表 層級 3
++有序列表 層級 1
+++有序列表 層級 2
++++有序列表 層級 3
+&br;
+
+** 定義列表 [#ld3bf7de]
+ :定義|敘述
+:定義|敘述
+&br;
+
+** 註解 [#s7e1dcef]
+ 註解只會在編輯時可見: 
+ //Comment
+註解只會在編輯時可見: 
+//Comment
+&br;
+
+** 水平線 [#jc7b1972]
+ ----
+----
+
+** 表格 [#pca8d4bc]
+
+*** 簡易 [#xb7f0c4f]
+ |aaa|bbb|ccc|
+ |111|222|333|
+|aaa|bbb|ccc|
+|111|222|333|
+
+*** 進階 [#lfad6154]
+ |RIGHT:100|CENTER:|SIZE(20)|c -------------- 格式定義行
+ |~Header|Header2|Header3|h ----------------- 表頭行
+ |CENTER:rowspan|COLOR(red):bbb|ccc|
+ |~|222|COLOR(#ff0000):BGCOLOR(yellow):333|
+ |footer|>|CENTER:colspan|f ----------------- 表尾行
+
+|RIGHT:100|CENTER:|SIZE(20)|c
+|~Header|Header2|Header3|h
+|CENTER:rowspan|COLOR(red):bbb|ccc|
+|~|222|COLOR(#ff0000):BGCOLOR(yellow):333|
+|footer|>|CENTER:colspan|f
+
+
+** CSV 表格 [#bc0b7e1f]
+ ,aaa , bbb , ccc
+ ,1111,2222,3333
+,aaa , bbb , ccc
+,1111,2222,3333
+
+** 擴充功能 [#vaf81370]
+
+ #contents 
+~(文章目錄擴充功能)

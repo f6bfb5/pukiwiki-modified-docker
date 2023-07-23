@@ -1,0 +1,40 @@
+#author("2023-07-20T21:16:33+00:00","default:guest","guest")
+#norelated
+* FrontPage [#qb249ac2]
+
+這個頁面會在未指定路徑時顯示。
+
+請依照你的網站內容，自由編輯內容 :) ((為了避免遭到輕易破壞，在加上內容主題或目的等等相關說明之後，不要忘記進行鎖定。也不要忘了更換密碼!))
+
+** 關於 PukiWiki [#c2af49f4]
+
+- [[PukiWiki]] -- PukiWiki 的介紹
+
+#flex(space-between){{
+*** 文件 [#o366701b]
+- [[開始使用>Help]] -- 要怎麼使用 PukiWiki 編輯？
+- [[文字語法規則>FormattingRules]]
+- [[擴充功能手冊>PukiWiki/1.4/Manual/Plugin]]
+*** 筆記
+- [[文字語法簡表>FormatExample]]
+- [[新增擴充功能>AddedPlugin]]
+- [[隨筆>Note]]
+#-
+|>|CENTER:&ref(https://i.imgur.com/vCT9925.png,320x);&br;THANK YOU FOR PLAYING .ᐟ|
+|&color(#1D9BF0){&fa(b,fw){twitter};}; Twitter|&color(#1D9BF0){■}; [[https://twitter.com/]]|
+|&color(#a970ff){&fa(b,fw){twitch};}; Twitch|&color(#a970ff){■}; [[https://twitch.tv/]]|
+|&color(#FF0000){&fa(b,fw){youtube};}; YouTube|&color(#FF0000){■}; [[https://www.youtube.com/]]|
+|&color(#5865f2){&fa(b,fw){discord};}; Discord|&color(#5865f2){■}; [[https://discord.com/]]|
+|&color(#dd2a7b){&fa(b,fw){instagram};}; Instagram|&color(#dd2a7b){■}; [[https://www.instagram.com/]]|
+|&color(#1b2838){&fa(b,fw){steam};}; Steam|&color(#1b2838){■}; [[https://store.steampowered.com/]]|
+|&color(#0070D1){&fa(b,fw){playstation};}; PlayStation|&color(#0070D1){■}; [[https://store.playstation.com/]]|
+|&color(#F26F23){&fa(b,fw){soundcloud};}; SoundCloud|&color(#F26F23){■}; [[https://soundcloud.com/]]|
+|&color(#1DB954){&fa(b,fw){spotify};}; Spotify|&color(#1DB954){■}; [[https://open.spotify.com/]]|
+|&color(#f96854){&fa(b,fw){patreon};}; Patreon|&color(#f96854){■}; [[https://www.patreon.com/]]|
+|&color(#fa5c5c){&fa(b,fw){itch-io};}; itch.io|&color(#fa5c5c){■}; [[https://itch.io/]]|
+|>|&fa(s,fw){cube}; SEE YOU NEXT TIME .ᐟ|
+}}
+
+** 留言 [#e32fcb4a]
+
+#pcomment

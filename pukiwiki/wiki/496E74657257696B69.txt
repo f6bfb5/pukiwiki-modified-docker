@@ -1,0 +1,49 @@
+#author("2023-07-18T07:14:28+00:00","default:guest","guest")
+* InterWiki [#teeaa78d]
+InterWiki 是讓 [[PukiWiki]] 連至其他伺服器的功能。
+
+在 [[InterWikiName]] 頁面可以定義伺服器的名稱。
+
+#contents
+
+** 連至 [[InterWiki]] (產生 InterWikiName) [#nb5bafb9]
+以 [[BracketName]] 格式記述伺服器清單上的 伺服器名稱:WikiName 頁面即可完成 [[InterWikiName]]。~
+將此加到其他頁面，就會產生連結至該伺服器的 [[WikiName]] 的超連結。
+
+ [[伺服器名稱:WikiName]]
+ [[pukiwiki:FrontPage]]
+
+** 加入伺服器清單 [#a71a4d66]
+可以在 [[InterWikiName]] 頁面以下列方式定義伺服器
+藉此加至伺服器清單中。
+
+ [URL 伺服器名稱] 類型
+ [https://pukiwiki.osdn.jp/index.php pukiwiki] utf8
+
+** WikiName 的插入位置 [#q7ad1d6d]
+可以使用 $1 指定所要求的連至 URL 的 [[WikiName]] 的插入位置。省略則會直接連在尾端。
+
+ -[https://pukiwiki.osdn.jp/index.php?cmd=backup&page=$1&age=1 pukiwiki] utf8
+
+** 文字編碼轉換類型 [#k34801d3]
+
+也能連至 [[PukiWiki]] 之外的頁面。若 URL 裡有包含日文的可能性，亦可使用類型指定應對用的編碼。
+
+ -[https://pukiwiki.osdn.jp/index.php?cmd=read&page=$1 somewhere] utf8
+
+:std 省略|直接以內部文字編碼進行 (標準為 SJIS) URL 編碼。
+:raw asis|不進行 URL 編碼。
+:sjis|將文字部份轉換為 SJIS，進行 URL 編碼。(mb_string 轉為 SJIS 的別名記法)
+:euc|將文字部份轉換為日文 EUC，進行 URL 編碼。(mb_string 轉為 EUC-JP 的別名記法)
+:utf8|將文字部份轉換為 UTF-8，進行 URL 編碼。(mb_string 轉為 UTF-8 的別名記法)
+:yw|轉換為 YukiWiki 系統的編碼。
+:moin|轉換為 MoinMoin 用途。
+
+其他 PHP4 的 mb_string 也支援下列文字編碼。
+
+''UCS-4, UCS-4BE, UCS-4LE, UCS-2, UCS-2BE, UCS-2LE, UTF-32, UTF-32BE, UTF-32LE, UCS-2LE, UTF-16, UTF-16BE, UTF-16LE, UTF-8, UTF-7, ASCII, EUC-JP, SJIS, eucJP-win, SJIS-win, ISO-2022-JP, JIS, ISO-8859-1, ISO-8859-2, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-9, ISO-8859-10, ISO-8859-13, ISO-8859-14, ISO-8859-15, byte2be, byte2le, byte4be, byte4le, BASE64, 7bit, 8bit, UTF7-IMAP''
+
+** 轉換為 [[YukiWiki]] 系統的編碼 [#zeb5d7f0]
+
+-[[WikiName]] 類型的內容會直接進行 URL 編碼。
+-[[BracketName]] 類型的內容會加上 [[ ]] 之後進行 URL編碼。

@@ -3,7 +3,6 @@ backup/
 cache/
 counter/
 diff/
-wiki/
 wiki.en/
 trackback/
 docker-compose.yml

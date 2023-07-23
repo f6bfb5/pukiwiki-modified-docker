@@ -1,0 +1,32 @@
+#author("2023-07-18T07:15:47+00:00","default:guest","guest")
+[[PukiWiki]]
+* InterWikiName [#bf2d416a]
+InterWiki 用的伺服器列表。
+  [URL 伺服器名稱] 類型
+請用上述形式進行記述。
+
+** WikiEngines [#c3e04f1c]
+-[https://wiki.c2.com/? WikiWikiWeb] raw 只有 WikiName 所以使用 raw
+-[https://fswiki.osdn.jp/cgi-bin/wiki.cgi?page= FSWiki] euc
+
+** PukiWiki [#j0d346fa]
+// PukiWiki Official Main Site
+-[https://pukiwiki.osdn.jp/? pukiwiki] utf8
+// PukiWiki Developer Site
+-[https://pukiwiki.osdn.jp/dev/? pukiwiki.dev] utf8
+
+** Search Engine [#jaaa4e4c]
+-[https://www.google.com/search?q=$1 Google] utf8
+-[https://search.yahoo.co.jp/search?p=$1 Yahoo] utf8
+-[https://www.wikipedia.org/wiki/ WikiPedia] utf8
+-[https://en.wikipedia.org/wiki/ WikiPedia.en] utf8
+-[https://ja.wikipedia.org/wiki/ WikiPedia.ja] utf8
+
+** 擴充 InterWikiName [#q192ea38]
+-[./?cmd=add&page= New]
+-[./?cmd=read&page= View]
+-[./?cmd=edit&page= Edit]
+-[./?cmd=search2&q=$1 Search]
+
+*** 其他 [#b69e2eec]
+-[http://docs.tdiary.org/users/? tDiaryUsers] euc

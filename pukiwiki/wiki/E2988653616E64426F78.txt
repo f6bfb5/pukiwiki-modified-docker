@@ -1,0 +1,16 @@
+#author("2023-07-20T23:40:11+00:00","default:guest","guest")
+*Sandbox [#qa730000]
+
+|>|CENTER:&size(32){&color(orange){''禍福は糾える縄の如し''};};&br;&ref(https://i.imgur.com/FrB5LXZ.png,320x);&br;|
+|&color(#1D9BF0){&fa(b,fw){twitter};}; Twitter|&color(#1D9BF0){■}; [[https://twitter.com/]]|
+|&color(#a970ff){&fa(b,fw){twitch};}; Twitch|&color(#a970ff){■}; [[https://twitch.tv/]]|
+|&color(#FF0000){&fa(b,fw){youtube};}; YouTube|&color(#FF0000){■}; [[https://www.youtube.com/]]|
+|&color(#5865f2){&fa(b,fw){discord};}; Discord|&color(#5865f2){■}; [[https://discord.com/]]|
+|&color(#dd2a7b){&fa(b,fw){instagram};}; Instagram|&color(#dd2a7b){■}; [[https://www.instagram.com/]]|
+|&color(#1b2838){&fa(b,fw){steam};}; Steam|&color(#1b2838){■}; [[https://store.steampowered.com/]]|
+|&color(#0070D1){&fa(b,fw){playstation};}; PlayStation|&color(#0070D1){■}; [[https://store.playstation.com/]]|
+|&color(#F26F23){&fa(b,fw){soundcloud};}; SoundCloud|&color(#F26F23){■}; [[https://soundcloud.com/]]|
+|&color(#1DB954){&fa(b,fw){spotify};}; Spotify|&color(#1DB954){■}; [[https://open.spotify.com/]]|
+|&color(#f96854){&fa(b,fw){patreon};}; Patreon|&color(#f96854){■}; [[https://www.patreon.com/]]|
+|&color(#fa5c5c){&fa(b,fw){itch-io};}; itch.io|&color(#fa5c5c){■}; [[https://itch.io/]]|
+|>|&fa(s,fw){cube}; SEE YOU NEXT TIME .ᐟ|

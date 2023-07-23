@@ -1,0 +1,24 @@
+#author("2023-07-22T10:55:53+00:00","default:guest","guest")
+* [#q1c2b8c6]
+
+**PukiWiki 入門 [#k5318ee1]
+
+- [[開始使用>Help]]
+-- [[Note]]
+-- [[工具比較>ComparisonWithOtherTools]]
+- [[文字語法>FormattingRules]] (WIP)
+-- [[語法範例>FormatExample]]
+- [[擴充功能>PukiWiki/1.4/Manual/Plugin]]
+-- [[新增擴充功能>AddedPlugin]] (WIP)
+- [[☆SandBox]]
+
+CENTER:&size(10){〔[[''最新''>RecentChanges]]〕};
+// ----
+// #popular
+----
+CENTER:&size(10){T.&counter(today);　Y.&counter(yesterday);};
+&size(10){&color(#663300){NOW.&online;};};　&size(10){TOTAL.&counter(total);};
+
+//常に表示されるメニューバーです。
+CENTER:&edit(MenuBar,noicon){edit};
+&br;

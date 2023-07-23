@@ -1,0 +1,96 @@
+#author("2023-07-22T15:17:59+00:00","default:guest","guest")
+* Note [#jba6ba59]
+
+** 修改紀錄 [#f8ebd455]
+
+*** 導入擴充功能 [#fb57d005]
+
+- 見→[[新增擴充功能>AddedPlugin]]
+
+*** 翻譯預設內容 [#i1f2cbce]
+
+- [[BugTrack/2013 - PukiWiki-dev>https://pukiwiki.osdn.jp/dev/?BugTrack/2013]]
+- 新增：[語系代碼].lng.php
+-- zh-tw.lng.php
+--- 對應翻譯內容
+- 修改：lib/init.php、pukiwiki.ini.php
+-- lib/init.php
+ case 'zh-tw': define('MB_LANGUAGE', 'Traditional Chinese'); break;
+--- 新增語系定義
+-- pukiwiki.ini.php
+ define('LANG', 'zh-tw');
+--- 更改系統語系
+
+*** 外觀微調 [#l2c68c69]
+
+- 修改：skin/pukiwiki.skin.php、skin/pukiwiki.css
+-- pukiwiki.skin.php
+--- 頁面的基礎架構
+--- 移除底部 Footer、調整工具欄
+-- pukiwiki.css
+--- 頁面的外觀調整
+
+** 首先要做的事 [#r65235b3]
+
+*** 初始設定 [#qe29c139]
+
+- pukiwiki.ini.php
+-- 修改管理者名稱
+ $modifier = 'YOUR_NAME';
+-- 修改管理者網站
+ $modifierlink = 'YOUR_WEBSITE_URL';
+-- 修改管理者密碼
+--- 初期可先以傳入參數的形式試用：
+ $adminpass = '{x-php-md5}' . md5('YOUR_PASSWORD');
+--- 確認動作沒有問題之後，可改為轉換過後的 SHA 或 MD5
+ $adminpass = '{SSHA}B78f8i/RpNC+CyFdKLH2odaK8hlPNjlOOUUyMA=='; // SSHA 'pass'
+ $adminpass = '{SMD5}o7lTdtHFJDqxFOVX09C8QnlmYmZnd2Qx';         // SMD5 'pass'
+
+*** 確認檔案權限 [#g53ab008]
+- 存取時如果畫面全白，很大機率是權限問題
+- 快速設定
+ chmod 755 . && chmod 644 *.php && chmod 644 *.lng.php && chmod 777 ./attach  && chmod 777 ./backup  && chmod 777 ./cache  && chmod 777 ./counter  && chmod 777 ./diff  && chmod 777 ./wiki  && chmod 666 ./wiki/*.txt && chmod 755 ./image  && chmod 644 ./image/*.png && chmod 644 ./image/*.gif && chmod 755 ./image/face  && chmod 644 ./image/face/*.png && chmod 755 ./lib && chmod 644 ./lib/*.php && chmod 755 ./plugin  && chmod 644 ./plugin/*.php && chmod 755 ./skin  && chmod 644 ./skin/*.php && chmod 644 ./skin/*.css 
+
+*** 動作確認 [#b90b3db3]
+- 編輯頁面、新增和刪除頁面、鎖定和解鎖頁面、擴充功能操作
+
+*** 自訂 [#a87ec49b]
+- 確認完畢動作無誤之後，即可依需求調整其他內容
+- pukiwiki.ini.php
+-- 主頁面名稱
+ $defaultpage = "[TOP_PAGE]";
+-- 網站名稱
+ $page_title = "[SITE_NAME]";
+
+** Tips [#f64758a1]
+
+*** 如何更改頁面名稱？ [#x26b255a]
+在想修改名稱的頁面點擊更改名稱圖示即可。
+
+*** 使用命名替文件分層吧！ [#f1896033]
+- 在命名頁面名稱時，加入「''&color(blue){/};''」可替文件加上層級分類
+--（例）hogehoge/page1、hogehoge/page2/no1
+-- page1 會變為 hogehoge 的子分頁，no1 會變為 page2 的子分頁
+-- 於該頁面裡點擊左上角的新增頁面，命名為「''&color(blue){./子分頁名稱};''」亦可
+
+** Snippet [#oc5d3a7a]
+
+*** Color Table [#b04f5709]
+
+- [[#def Color Variations & Conversions>https://0to255.com/#def]]
+
+|+2|BGCOLOR(#fff):#fff|
+|0|BGCOLOR(#def):#def|
+|-2|BGCOLOR(#bdf):#bdf|
+|-4|BGCOLOR(#9cf):#9cf|
+|-8|BGCOLOR(#5af):COLOR(#fefefe):#5af|
+|-12|BGCOLOR(#18f):COLOR(#fefefe):#18f|
+|-16|BGCOLOR(#06c):COLOR(#fefefe):#06c|
+
+*** TOC with border [#hea67252]
+
+ |BGCOLOR(#fefefe):650|c
+ |　''Contents''|
+ |#contents|
+
+&tag(Note);
